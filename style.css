@@ -212,3 +212,25 @@
     line-height: 22px;
     color: #545454;
 }
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: black;
+    border: 1px red solid;
+    opacity: 0.1;
+}
+
+.popup__container {
+    width: 430px;
+    height: 330px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+
+}
