@@ -6,6 +6,7 @@
     max-width: 880px;
     margin: 0 auto;
     padding: 45px 0 0 0;
+    border-bottom: 1px #545454 solid;
 }
 
 @media screen and (max-width: 767px) {

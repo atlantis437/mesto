@@ -4,7 +4,7 @@
     height: 50px;
     justify-self: flex-end;
     align-self: center;
-    background-image: url(../../../sprint-4-images/Add\ Button.png);
+    background-image: url(../../../sprint-4-images/Add\ Button.svg);
     background-color: transparent;
     border: none;
     margin: 0;
@@ -17,7 +17,7 @@
     .profile__add-button {
     width: 282px;
     height: 50px;
-    background-image: url(../../../sprint-4-images/Add\ Button\ mobile.png);
+    background-image: url(../../../sprint-4-images/Add\ Button\ mobile.svg);
     background-position: center;
     box-sizing: border-box;
     }
