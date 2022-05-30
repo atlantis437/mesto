@@ -1,6 +1,5 @@
 .profile__edit-button {
     display: flex;
-    align-self: flex-end;
     width: 24px;
     height: 24px;
     background-image: url(../../../sprint-4-images/Edit\ Button.png);
