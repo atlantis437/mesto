@@ -1,26 +1,14 @@
 
 
 
-function openPopup() {
-    
-    let container = document.querySelector('container');
-    let popup = container.querySelector('popup');
-    let formElement = popup.querySelector('popup__container');
-    let editElement = container.querySelector('profile__edit-button');
-    let closeElement = popup.querySelector('popup__close-button');
+const editButton = document.querySelector('.profile__edit-button');
+const popup = document.querySelector('.popup');
+const closeButton = document.querySelector('.popup__close-button');
 
-    if (editElement = true)
+editButton.addEventListener('click', function() {
+    popup.classList.add('popup_open');
+})
 
-    
-    popup.classlist.add('popup_opened');
-    
-
-
-}
-
-       
-
-  
-
-editElement.addEventListener('click', openPopup);
-openPopup();
+closeButton.addEventListener('click', function() {
+    popup.classList.remove('popup_open');
+})
