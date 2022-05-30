@@ -1,0 +1,27 @@
+.popup__form {
+    display: flex;
+    width: calc(100% - 36px * 2);
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 30px;
+    padding-bottom: 9px;
+    border-width: 0 0 1px 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: black;
+    background-color: transparent;
+    border-color: rgba(0,0,0,.2);
+}
+
+@media screen and (max-width: 767px) {
+    .popup__form {
+    width: calc(100% - 22px * 2);
+    margin-bottom: 27px;
+    }
+}
+
+.popup__form:focus {
+    outline-color: transparent;
+}

@@ -1,0 +1,14 @@
+.profile__edit {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    margin: 0;
+    padding-top: 22px;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__edit {
+    justify-content: center;
+    padding-top: 0px;
+    }
+}

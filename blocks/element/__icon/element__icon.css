@@ -1,0 +1,16 @@
+.element__icon {
+    width: 22px;
+    height: 19px;
+    background-size: cover;
+    padding-top: 5px;
+}
+
+.element__icon:hover {
+    opacity: 0.5;
+}
+
+/*
+.element__icon_active {
+    background-color: black;
+}
+*/

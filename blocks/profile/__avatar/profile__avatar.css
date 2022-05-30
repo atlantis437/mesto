@@ -1,0 +1,14 @@
+.profile__avatar {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__avatar {
+    padding-right: 0;
+    padding-bottom: 26px;
+    }
+}

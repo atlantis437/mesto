@@ -1,0 +1,30 @@
+.element {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-left: 17px;
+    padding-top: 20px;
+}
+
+.element:nth-child(3n) {
+    padding-left: 0;
+}
+
+@media screen and (max-width: 1279px) {
+    .element:nth-child(3n) {
+    padding-left: 17px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .element:nth-child(3n) {
+    padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .element {
+    padding-left: 0;
+    }
+}

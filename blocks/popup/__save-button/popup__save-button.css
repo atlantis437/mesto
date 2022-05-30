@@ -1,0 +1,30 @@
+.popup__save-button {
+    display: flex;
+    width: 358px;
+    height: 50px;
+    justify-self: flex-end;
+    align-self: center;
+    background-image: url(../../../sprint-4-images/Submit\ Button.png);
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-size: cover;
+    margin: 18px 36px 37px;
+}
+
+.popup__save-button:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__save-button {
+    width: 238px;
+    height: 46px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    margin: 15px 22px 25px;
+    }
+}
