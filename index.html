@@ -6,8 +6,7 @@
   <meta name="description" content="Проектная работа 4">
   <meta name="keywords" content="джаваскарипт, попап, форма, адаптивная, верстка">
   <meta name="author" content="Владислав Финоченко">
-  <title>Место</title>
-  <link rel="stylesheet" href="./vendor/normalize.css"> 
+  <title>Место</title>  
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./pages/index.css">
 </head>
@@ -16,8 +15,8 @@
     <div class="container">
   
       <header class="header">
-          <img src="./sprint-4-images/logo.png" class="header__logo" alt="лого">
-          <img src="./sprint-4-images/Line.png" class="header__line" alt="линия">
+        <img src="./sprint-4-images/logo.png" class="header__logo" alt="лого">
+        <img src="./sprint-4-images/Line.png" class="header__line" alt="линия">
       </header>
   
       <main class="content">
@@ -27,13 +26,12 @@
             <div class="profile__info">          
               <div class="profile__edit">
                 <h1 class="profile__title"><nobr>Жак-Ив Кусто</nobr></h1>
-                <img src="./sprint-4-images/Edit Button.png" class="edit__button" alt="кнопка">       
+                <button  class="button profile__edit-button"></button>
               </div>
               <p class="profile__subtitle">Исследователь океана</p>
             </div>
           </div>
-
-          <img src="sprint-4-images/Add Button.png" class="profile__addButton" alt="кнопка">           
+          <button class="button profile__add-button"></button>
         </section>
 
         <section class="elements">
@@ -41,8 +39,8 @@
             <img src="./sprint-4-images/element-photo1.jpg" class="element__photo" alt="фото">
             <div class="element__box">
               <div class="element__group">
-                <h2 class="element__title">Карачаево-Ч...</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <h2 class="element__title">Карачаево-Черкессия</h2>
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
@@ -52,7 +50,7 @@
             <div class="element__box">
               <div class="element__group">
                 <h2 class="element__title">Домбай</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
@@ -62,7 +60,7 @@
             <div class="element__box">
               <div class="element__group">
                 <h2 class="element__title">Гора Эльбрус</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
@@ -72,7 +70,7 @@
             <div class="element__box">
               <div class="element__group">
                 <h2 class="element__title">Домбай</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
@@ -82,7 +80,7 @@
             <div class="element__box">
               <div class="element__group">
                 <h2 class="element__title">Гора Эльбрус</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
@@ -92,22 +90,26 @@
             <div class="element__box">
               <div class="element__group">
                 <h2 class="element__title">Карачаевск</h2>
-                <img src="./sprint-4-images/like.png" class="like__button" alt="лайк">
+                <img src="./sprint-4-images/like.png" class="element__icon element__icon_active" alt="лайк">
               </div>
             </div>
           </div>
             
         </section>
 
-        <footer class="footer">            
-            <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
-        </footer>
+        <footer class="footer">
+          <p class="footer__copyright"><nobr>&#169; 2020 Mesto Russia</nobr></p>
+      </footer>
 
         <div class="popup">
           <button class="popup__close-button"></button>
-          <h1 class="popup__title">Редактировать профиль</h1>
-          <form action="save" class="popup__container">
-          </form>
+          <div class="popup__container">
+            <h1 class="popup__title">Редактировать профиль</h1>
+            <input type="text" class="form">
+            <input type="text" class="form">
+            <button  class="button save__button"></button>
+          </div>
+          
 
 
         </div>
