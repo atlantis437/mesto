@@ -1,10 +1,10 @@
 .element {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     padding-left: 17px;
-    padding-top: 20px;
+    padding-top: 20px;    
 }
 
 .element:nth-child(3n) {
