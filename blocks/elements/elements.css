@@ -2,10 +2,9 @@
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
-    width: calc(100% - 200px * 2);
+    width: 100%;
     padding: 31px 0px 67px;
-    margin: 0 auto;
-    max-width: 880px;
+    margin: 0 auto;    
 }
 
 @media screen and (max-width: 767px) {
