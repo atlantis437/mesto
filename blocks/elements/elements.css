@@ -4,7 +4,8 @@
     flex-direction: row-reverse;
     width: 100%;
     padding: 31px 0px 67px;
-    margin: 0 auto;    
+    margin: 0 auto;
+    justify-content: center;
 }
 
 @media screen and (max-width: 767px) {
