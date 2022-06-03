@@ -1,16 +1,17 @@
 .popup__save-button {
-    display: flex;
-    width: 358px;
-    height: 50px;
-    justify-self: flex-end;
-    align-self: center;
-    background-image: url(../../../sprint-4-images/Submit\ Button.svg);
-    background-color: transparent;
+    min-width: 358px;
+    min-height: 50px;
+    background-color: black;
+    color: white;
     border: none;
-    padding: 0;
     cursor: pointer;
-    background-size: cover;
     margin: 18px 36px 37px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 0;
+    border-radius: 2px;
 }
 
 .popup__save-button:hover {
@@ -19,11 +20,10 @@
 
 @media screen and (max-width: 767px) {
     .popup__save-button {
-    width: 238px;
-    height: 46px;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
+    min-width: 238px;
+    min-height: 46px;
     margin: 15px 22px 25px;
+    font-size: 14px;
+    line-height: 17px;
     }
 }
