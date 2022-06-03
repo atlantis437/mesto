@@ -1,5 +1,5 @@
 .element__icon {
-    width: 22px;
+    min-width: 22px;
     height: 19px;
     background-image: url(../../../sprint-4-images/like.svg);
     background-size: cover;
@@ -7,14 +7,10 @@
     border: none;
     padding-top: 5px;
     align-self: center;
+    padding: 0;
 }
 
-.element__icon:hover {
+.element__icon:active {
     opacity: 0.5;
 }
 
-/*
-.element__icon_active {
-    background-color: black;
-}
-*/

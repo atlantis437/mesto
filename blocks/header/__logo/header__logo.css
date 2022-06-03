@@ -1,9 +1,7 @@
 .header__logo {
     display: flex;
-    position: relative;
     width: 142px;
     height: 33px;
-    z-index: 1;
     padding-bottom: 41px;
 }
 
