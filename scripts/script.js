@@ -1,11 +1,13 @@
 
 const editButton = document.querySelector('.profile__edit-button');
-const popup = document.querySelector('.popup');
-const closeButton = document.querySelector('.popup__close-button');
-
+const addButton = document.querySelector('.profile__add-button');
+const popupedit = document.querySelector('.popup-edit-profile');
+const popupimg = document.querySelector('.popup-add-image');
+const closeButtonEd = document.querySelector('.popup__close-button_edit');
+const closeButtonImg = document.querySelector('.popup__close-button_img');
 
 function openPopup () {
-    popup.classList.add('popup_open');
+    popupedit.classList.add('popup_open');
 }
 
 editButton.addEventListener('click', function() {
@@ -13,11 +15,28 @@ editButton.addEventListener('click', function() {
 })
 
 function closePopup () {    
-  popup.classList.remove('popup_open');
+  popupedit.classList.remove('popup_open');
 }
 
-closeButton.addEventListener('click', function() {
+closeButtonEd.addEventListener('click', function() {
     closePopup ();
+})
+
+
+function openPopupImg () {
+  popupimg.classList.add('popup_open');
+}
+
+addButton.addEventListener('click', function() {
+  openPopupImg ();
+})
+
+function closePopupImg () {    
+  popupimg.classList.remove('popup_open');
+}
+
+closeButtonImg.addEventListener('click', function() {
+    closePopupImg ();
 })
 
 const saveButton = document.querySelector('.popup__save-button');
