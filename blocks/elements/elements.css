@@ -1,7 +1,7 @@
 .elements {
     display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     padding: 31px 0px 67px;
     margin: 0 auto;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 767px) {
     .elements {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0;
     padding-top: 16px;
     width: calc(100% - 19px * 2);

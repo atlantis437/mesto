@@ -3,28 +3,28 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 0;
-    padding-left: 17px;
+    padding-right: 15px;
     padding-top: 20px;    
 }
 
-.element:nth-child(3n) {
-    padding-left: 0;
+.element:nth-child(3n + 1) {
+    padding-right: 0;
 }
 
 @media screen and (max-width: 1279px) {
-    .element:nth-child(3n) {
-    padding-left: 17px;
+    .element:nth-child(3n + 1) {
+    padding-right: 17px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .element:nth-child(3n) {
-    padding-left: 0;
+    .element:nth-child(3n + 1) {
+    padding-right: 0;
     }
 }
 
 @media screen and (max-width: 767px) {
     .element {
-    padding-left: 0;
+    padding-right: 0;
     }
 }
