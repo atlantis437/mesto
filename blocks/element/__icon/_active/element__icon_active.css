@@ -1,0 +1,11 @@
+.element__icon_active {
+    min-width: 22px;
+    height: 19px;
+    background-image: url(../../../../sprint-4-images/like_active.svg);
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    padding-top: 5px;
+    align-self: center;
+    padding: 0;
+}
