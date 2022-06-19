@@ -93,6 +93,7 @@ function createCard (CARD) {
   const Imgsrc = newCard.querySelector('.element__photo');
   Imgname.textContent = CARD.name;
   Imgsrc.src = CARD.link;
+  Imgsrc.alt = CARD.name;
 
   const deleteButton = newCard.querySelector('.element__delete-icon');
   deleteButton.addEventListener('click', function () {
@@ -117,9 +118,9 @@ initialCards.forEach(function (item)  {
 
 /* добавление карточки */
 
-const saveimgButton = document.querySelector('.popup__saveimg-button');
-const ImgnameInput = document.querySelector('.popup__img_name');
-const ImgsrcInput = document.querySelector('.popup__img_src');
+const saveimgButton = document.querySelector('.popup__save-button_img');
+const ImgnameInput = document.querySelector('.popup__form_imgname');
+const ImgsrcInput = document.querySelector('.popup__form_imgsrc');
 
 function MakeCard (evt) {
   evt.preventDefault();
@@ -143,6 +144,7 @@ const popupSub = openPic.querySelector('.popup__subtitle');
 function viewElement(Element) {
   popupSub.textContent = Element.name;
   popupPic.src = Element.link;
+  popupPic.alt = Element.name; 
   openviewElement ();
 }
 
