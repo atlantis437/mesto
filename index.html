@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Проектная работа 4">
-  <meta name="keywords" content="джаваскарипт, попап, форма, адаптивная, верстка">
+  <meta name="description" content="Проектная работа 5">
+  <meta name="keywords" content="джаваскарипт, попап, форма, адаптивная, верстка, массивы, DOM">
   <meta name="author" content="Владислав Финоченко">
   <title>Место</title>
   <link rel="stylesheet" href="./pages/index.css">
@@ -34,7 +34,7 @@
         <section class="elements">
           <template id="card">
           <div class="element">
-            <img src="./sprint-4-images/pskov.jpg" class="element__photo" alt="псков">
+            <img src="" class="element__photo" alt="картинка пользователя">
             <button type="button" class="button element__delete-icon"></button>
             <div class="element__box">
               <div class="element__group">
@@ -67,10 +67,18 @@
           <button type="button" class="button popup__close-button popup__close-button_img"></button>
           <div class="popup__container">
             <h2 class="popup__title">Новое место</h2>
-            <input type="text" class="popup__form popup__img_name" value="Название">
+            <input type="text" class="popup__form popup__img_name" value="Название места">
             <input type="text" class="popup__form popup__img_src" value="Ссылка на картинку">
             <button  type="submit" class="popup__save-button popup__saveimg-button">Создать</button>
           </div> 
+        </div>
+
+        <div class="popup popup-view-image">
+          <div class="popup__img">
+            <button type="button" class="button popup__close-button popup__close-button_pic"></button>
+            <img class="popup__picture">              
+            <h3 class="popup__subtitle"></h3>
+          </div>
         </div>
       
         

@@ -1,0 +1,9 @@
+.popup__picture {
+    max-width: 75vw;
+    max-height: 75vh;
+    z-index: 3;
+    background-color: blue;
+    border-radius: 0px;
+    object-fit: contain;
+}
+

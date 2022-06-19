@@ -1,24 +1,25 @@
-.popup__close-button {
+.popup__close-button_pic {
     display: flex;
     position: relative;
     top: -8px;
-    right: -238px;
+    right: -40px;
     width: 32px;
     height: 32px;
-    background-image: url(../../../sprint-4-images/Close\ Icon.svg);
+    background-image: url(../../../../sprint-4-images/Close\ Icon.svg);
     background-color: transparent;
     border: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
     background-size: cover;
+    align-items: flex-end;  
 }
 
 @media screen and (max-width: 767px) {
-    .popup__close-button {
+    .popup__close-button_pic {
     width: 20px;
     height: 20px;
     top: -16px;
-    right: -132px;
+    right: 0;
     }
 }

@@ -54,7 +54,7 @@ function editForm () {
 
 saveButton.addEventListener('click', editForm);
 
-/* рендер массива */
+/* рендер массива, и обработчики на лайки, удаление и просмотр*/
 
 const initialCards = [
   {
@@ -104,27 +104,59 @@ function createCard (CARD) {
     evt.target.classList.toggle('element__icon_active');
   });
 
+  Imgsrc.addEventListener('click', () => viewElement(CARD));
+
   return newCard;
 }
 
 initialCards.forEach(function (item)  {
     const RenCard = createCard (item);
-    elements.prepend(RenCard);
+    elements.append(RenCard);
 });
 
 
 /* добавление карточки */
-/*
+
 const saveimgButton = document.querySelector('.popup__saveimg-button');
+const ImgnameInput = document.querySelector('.popup__img_name');
+const ImgsrcInput = document.querySelector('.popup__img_src');
 
 function MakeCard (evt) {
   evt.preventDefault();
-  const ImgnameInput = document.querySelector('.popup__img_name');
-  const ImgsrcInput = document.querySelector('.popup__img_src');
-  const newCard = element.cloneNode(true);
-  newCard.querySelector('.element__title').textContent = ImgnameInput.value
-  newCard.querySelector('.element__photo').src = ImgsrcInput.value
-  return newCard;
+  const SrcCard = {
+    link: ImgsrcInput.value,
+    name: ImgnameInput.value
+  }
+  const MyCard = createCard(SrcCard);
+  elements.prepend(MyCard);
+  closePopupImg();
 }
-*/
 
+saveimgButton.addEventListener('click', MakeCard);
+
+/* открытие и закрытие картинки */
+
+const openPic = document.querySelector('.popup-view-image');
+const popupPic = openPic.querySelector('.popup__picture');
+const popupSub = openPic.querySelector('.popup__subtitle');
+
+function viewElement(Element) {
+  popupSub.textContent = Element.name;
+  popupPic.src = Element.link;
+  openviewElement ();
+}
+
+
+const closeButtonPic = document.querySelector('.popup__close-button_pic');
+
+function openviewElement () {
+  openPic.classList.add('popup_open');
+}
+
+function closePicView () {    
+  openPic.classList.remove('popup_open');
+}
+
+closeButtonPic.addEventListener('click', function() {
+  closePicView();
+})
