@@ -30,20 +30,20 @@ closeButtons.forEach((button) => {
 
 
 /* редактирование профиля */
-const saveButton = document.querySelector('.popup__container_prf');
+const profileForm = document.querySelector('.popup__container_prf');
 const nameInput = document.querySelector('.popup__form_name');
 const jobInput = document.querySelector('.popup__form_job');
 const userName = document.querySelector('.profile__title');
 const userJob = document.querySelector('.profile__subtitle');
 
-function editForm (evt) {
+function handleProfileFormSubmit (evt) {
     evt.preventDefault();
     userName.textContent = nameInput.value;
     userJob.textContent = jobInput.value;
     closePopup (popupEdit);
 }
 
-saveButton.addEventListener('submit', editForm);
+profileForm.addEventListener('submit', handleProfileFormSubmit);
 
 
 /* рендер массива, и обработчики на лайки, удаление и просмотр*/
@@ -110,7 +110,7 @@ initialCards.forEach(function (item)  {
 
 /* добавление карточки */
 
-const saveImgbutton = document.querySelector('.popup__container_img');
+const cardForm = document.querySelector('.popup__container_img');
 const imgNameInput = document.querySelector('.popup__form_imgname');
 const imgSrcInput = document.querySelector('.popup__form_imgsrc');
 
@@ -126,7 +126,7 @@ function makeCard (evt) {
   closePopup (popupImg);
 }
 
-saveImgbutton.addEventListener('submit', makeCard);
+cardForm.addEventListener('submit', makeCard);
 
 /* просмотр картинки */
 
