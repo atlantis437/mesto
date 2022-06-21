@@ -3,41 +3,31 @@ const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
 const popupEdit = document.querySelector('.popup-edit-profile');
 const popupImg = document.querySelector('.popup-add-image');
-const closeButtonEd = document.querySelector('.popup__close-button_edit');
-const closeButtonImg = document.querySelector('.popup__close-button_img');
+const closeButtons = document.querySelectorAll('.popup__close-button');
 
-function openPopup () {
-    popupEdit.classList.add('popup_open');
+function openPopup(popup) {
+  popup.classList.add('popup_open');
+}
+
+function closePopup(popup) {
+  popup.classList.remove('popup_open');
 }
 
 editButton.addEventListener('click', function() {
-    openPopup ();
+  openPopup (popupEdit);
 })
-
-function closePopup () {    
-  popupEdit.classList.remove('popup_open');
-}
-
-closeButtonEd.addEventListener('click', function() {
-    closePopup ();
-})
-
-
-function openPopupImg () {
-  popupImg.classList.add('popup_open');
-}
 
 addButton.addEventListener('click', function() {
-  openPopupImg ();
+  openPopup (popupImg);
 })
 
-function closePopupImg () {    
-  popupImg.classList.remove('popup_open');
-}
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап 
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
+});
 
-closeButtonImg.addEventListener('click', function() {
-    closePopupImg ();
-})
 
 /* редактирование профиля */
 const saveButton = document.querySelector('.popup__container_prf');
@@ -50,7 +40,7 @@ function editForm (evt) {
     evt.preventDefault();
     userName.textContent = nameInput.value;
     userJob.textContent = jobInput.value;
-    closePopup ();
+    closePopup (popupEdit);
 }
 
 saveButton.addEventListener('submit', editForm);
@@ -133,12 +123,12 @@ function makeCard (evt) {
   const myCard = createCard(srcCard);
   elements.prepend(myCard);
   evt.target.reset();
-  closePopupImg();
+  closePopup (popupImg);
 }
 
 saveImgbutton.addEventListener('submit', makeCard);
 
-/* открытие и закрытие картинки */
+/* просмотр картинки */
 
 const openPic = document.querySelector('.popup-view-image');
 const popupPic = openPic.querySelector('.popup__picture');
@@ -148,30 +138,15 @@ function viewElement(Element) {
   popupSub.textContent = Element.name;
   popupPic.src = Element.link;
   popupPic.alt = Element.name; 
-  openviewElement ();
+  openPopup (openPic);
 }
 
 
-const closeButtonPic = document.querySelector('.popup__close-button_pic');
-
-function openviewElement () {
-  openPic.classList.add('popup_open');
-}
-
-function closePicView () {    
-  openPic.classList.remove('popup_open');
-}
-
-closeButtonPic.addEventListener('click', function() {
-  closePicView();
-})
 
 
-/* function openPopup(popup) {
-  popup.classList.add('popup_opened');
-}
 
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-}
-*/
+
+
+
+
+
