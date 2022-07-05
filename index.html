@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Проектная работа 5">
+  <meta name="description" content="Проектная работа 6">
   <meta name="keywords" content="джаваскарипт, попап, форма, адаптивная, верстка, массивы, DOM">
   <meta name="author" content="Владислав Финоченко">
   <title>Место</title>
@@ -55,20 +55,24 @@
 
         <div class="popup popup-edit-profile">
           <button type="button" class="button popup__close-button"></button>
-          <form class="popup__container popup__container_prf">
+          <form class="form popup__container popup__container_prf" novalidate>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type="text" class="popup__form popup__form_name" value="Жак-Ив Кусто">
-            <input type="text" class="popup__form popup__form_job" value="Исследователь океана">
+            <input name="user" minlength="2" maxlength="40" type="text" class="popup__form popup__form_name" value="Жак-Ив Кусто" required>
+            <span class="popup__form-error"></span>
+            <input name="info" minlength="2" maxlength="200" type="text" class="popup__form popup__form_job" value="Исследователь океана" required>
+            <span class="popup__form-error"></span>
             <button  type="submit" class="popup__save-button">Сохранить</button>
           </form>
         </div>
 
         <div class="popup popup-add-image">
           <button type="button" class="button popup__close-button"></button>
-          <form class="popup__container popup__container_img">
+          <form class="form popup__container popup__container_img" novalidate>
             <h2 class="popup__title">Новое место</h2>
-            <input type="text" class="popup__form popup__form_imgname" placeholder="Название места">
-            <input type="text" class="popup__form popup__form_imgsrc" placeholder="Ссылка на картинку">
+            <input minlength="2" maxlength="30" type="text" class="popup__form popup__form_imgname" placeholder="Название места" required>
+            <span class="popup__form-error"></span>
+            <input type="url" class="popup__form popup__form_imgsrc" placeholder="Ссылка на картинку" required>
+            <span class="popup__form-error"></span>
             <button  type="submit" class="popup__save-button popup__save-button_img">Создать</button>
           </form> 
         </div>
@@ -84,6 +88,7 @@
         
     </div>
   <script src="./scripts/script.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
 

@@ -25,3 +25,17 @@
 .popup__form:focus {
     outline-color: transparent;
 }
+
+.popup__form_type_error {
+    border-color: rgb(255, 0, 0);
+}
+
+.popup__form-error_active {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: red;
+    text-align: start;
+    padding-top: 5px;
+    padding-left: 36px;
+}
