@@ -1,14 +1,14 @@
 /* Валидация форм */
 
 const showInputError = (formElement, inputElement, errorMessage) => {
-    const errorElement = formElement.querySelector('.popup__form-error');
+    const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add('popup__form_type_error');
     errorElement.textContent = errorMessage;
     errorElement.classList.add('popup__form-error_active');
   };
   
   const hideInputError = (formElement, inputElement) => {
-    const errorElement = formElement.querySelector('.popup__form-error');
+    const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.remove('popup__form_type_error');
     errorElement.textContent = '';
     errorElement.classList.remove('popup__form-error_active');

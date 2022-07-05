@@ -1,0 +1,18 @@
+.popup__form-error {
+    min-height: 30px;
+    line-height: 15px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.popup__form-error_active {
+    color: red;
+    text-align: start;
+    padding-left: 36px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__form-error_active {
+    padding-left: 22px;
+    }
+}
