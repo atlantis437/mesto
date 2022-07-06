@@ -1,9 +1,8 @@
 /* открытие и закрытие попапов */
-const editButton = document.querySelector('.profile__edit-button');
-const addButton = document.querySelector('.profile__add-button');
+const buttonEdit = document.querySelector('.profile__edit-button');
+const buttonAdd = document.querySelector('.profile__add-button');
 const popupEdit = document.querySelector('.popup-edit-profile');
 const popupImg = document.querySelector('.popup-add-image');
-const closeButtons = document.querySelectorAll('.popup__close-button');
 const popupList = document.querySelectorAll('.popup');
 
 function openPopup(popup) {
@@ -16,20 +15,13 @@ function closePopup(popup) {
   document.removeEventListener('keyup', closePopupEsc);
 }
 
-editButton.addEventListener('click', function() {
+buttonEdit.addEventListener('click', function() {
   openPopup (popupEdit);
 })
 
-addButton.addEventListener('click', function() {
+buttonAdd.addEventListener('click', function() {
   openPopup (popupImg);
 })
-
-// закрытие по крестику
-
-closeButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
 
 // закрытие по клавише ESC
 
@@ -40,12 +32,11 @@ const closePopupEsc = (evt) => {
   }
 }
 
-// закрытие по оверлею
+// закрытие по оверлею и крестику
 
 popupList.forEach((popup) => {
   popup.addEventListener('mousedown', (evt) => {
-      const overlay = evt.target.classList; 
-      if (overlay.contains('popup_open')) {
+      if (evt.target === evt.currentTarget || evt.target.classList.contains('popup__close-button')) {
           closePopup(popup);
       }
   });
@@ -109,8 +100,8 @@ function createCard (card) {
   imgSrc.src = card.link;
   imgSrc.alt = card.name;
 
-  const deleteButton = newCard.querySelector('.element__delete-icon');
-  deleteButton.addEventListener('click', function () {
+  const buttonDel = newCard.querySelector('.element__delete-icon');
+  buttonDel.addEventListener('click', function () {
     newCard.remove();
   });
 

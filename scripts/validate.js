@@ -23,20 +23,22 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   };
   
   // кнопка
-  const toggleButtonState = (inputList, buttonElement) => {
-    if (hasInvalidInput(inputList)) {    
-      buttonElement.classList.add('popup__save-button_disabled');
-    } else {    
-      buttonElement.classList.remove('popup__save-button_disabled');
-    }
-  };
-  
   const hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });  
   };
-  
+
+  const toggleButtonState = (inputList, buttonElement) => {
+    if (hasInvalidInput(inputList)) {
+      buttonElement.classList.add('popup__save-button_disabled');
+      buttonElement.setAttribute('disabled', '');
+    } else {
+      buttonElement.classList.remove('popup__save-button_disabled');
+      buttonElement.removeAttribute('disabled', '');
+    }
+  };
+    
   // валидация и обработчики
   const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll('.popup__form'));
@@ -72,3 +74,5 @@ const showInputError = (formElement, inputElement, errorMessage) => {
     inputErrorClass: 'popup__form_type_error',
     errorClass: 'popup__form-error_active'
   });
+
+  
