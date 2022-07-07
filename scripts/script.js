@@ -126,9 +126,12 @@ initialCards.forEach(function (item)  {
 const cardForm = document.querySelector('.popup__container_img');
 const imgNameInput = document.querySelector('.popup__form_imgname');
 const imgSrcInput = document.querySelector('.popup__form_imgsrc');
+const buttonSubmit = document.querySelector('.popup__save-button_img');
 
 function makeCard (evt) {
   evt.preventDefault();
+  buttonSubmit.setAttribute('disabled', '');
+  buttonSubmit.classList.add('popup__save-button_disabled');
   const srcCard = {
     link: imgSrcInput.value,
     name: imgNameInput.value
@@ -141,15 +144,16 @@ function makeCard (evt) {
 
 cardForm.addEventListener('submit', makeCard);
 
+
 /* просмотр картинки */
 
-const openPic = document.querySelector('.popup-view-image');
-const popupPic = openPic.querySelector('.popup__picture');
-const popupSub = openPic.querySelector('.popup__subtitle');
+const picOpen = document.querySelector('.popup-view-image');
+const popupPic = picOpen.querySelector('.popup__picture');
+const popupSub = picOpen.querySelector('.popup__subtitle');
 
 function viewElement(Element) {
   popupSub.textContent = Element.name;
   popupPic.src = Element.link;
   popupPic.alt = Element.name; 
-  openPopup (openPic);
+  openPopup (picOpen);
 }
